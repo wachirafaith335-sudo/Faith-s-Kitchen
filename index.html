@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Luxury comfort food, crafted fresh and delivered fast.">
+    <meta name="keywords" content="restaurant, food delivery, grilled chicken, burgers, Nairobi">
+    <meta name="theme-color" content="#c99412">
+    <meta property="og:title" content="Faith's Kitchen">
+    <meta property="og:description" content="Luxury comfort food, crafted fresh and delivered fast.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Faith's Kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <div class="logo" aria-label="Faith's Kitchen home">
+                <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="fk-gold" x1="0" x2="1" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#7c3aed"/>
+                            <stop offset="55%" stop-color="#a855f7"/>
+                            <stop offset="100%" stop-color="#c084fc"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="32" cy="32" r="30" fill="#1b0f2a" opacity="0.95"/>
+                    <circle cx="32" cy="32" r="27" fill="none" stroke="url(#fk-gold)" stroke-width="2"/>
+                    <path d="M18 18l5 6 8-10 8 10 5-6 6 12H12z" fill="url(#fk-gold)" opacity="0.9"/>
+                    <text x="32" y="44" text-anchor="middle" font-family="Manrope, sans-serif" font-size="20" font-weight="800" letter-spacing="1" fill="url(#fk-gold)">FK</text>
+                </svg>
+                <span class="logo-text">Faith's Kitchen</span>
+            </div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="cart-link" class="cart-link" type="button">Cart (<span id="cart-count">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="hero">
+            <p class="eyebrow">Freshly prepared daily</p>
+            <h2>Flavor-forward comfort food for every craving</h2>
+            <p>Bold ingredients, fast delivery, and warm hospitality in every bite.</p>
+            <a class="cta" href="#menu">Order now</a>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-text">
+                <h2>About Faith's Kitchen</h2>
+                <p>We cook with real ingredients, seasonal produce, and house-made sauces that bring out balanced flavor. Every meal is prepared to feel special while still being comforting.</p>
+                <a class="secondary-cta" href="#contact">Learn more</a>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <h2>Popular Menu</h2>
+            <p class="menu-subtitle">Click View for details or add directly to your cart.</p>
+            <div id="menu-container" class="menu-container"></div>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Feedback</h2>
+            <p class="contact-info">
+                <span class="icon" aria-hidden="true">Phone:</span>
+                <a href="tel:+254726254749">+254 726 254 749</a>
+                <span class="separator">|</span>
+                <a href="sms:+254726254749">Send SMS</a>
+                <span class="separator">|</span>
+                <span class="icon" aria-hidden="true">Email:</span>
+                <a href="mailto:info@faithskitchen.com">info@faithskitchen.com</a>
+            </p>
+            <div class="order-actions" aria-label="Place an order">
+                <a id="order-whatsapp" class="cta" href="https://wa.me/254726254749" target="_blank" rel="noopener">Order via WhatsApp</a>
+                <a id="order-email" class="secondary-cta" href="mailto:info@faithskitchen.com?subject=Order%20Request">Order via Email</a>
+            </div>
+
+            <form id="contact-form" action="https://formspree.io/f/xjgawvjy" method="POST" aria-describedby="contact-desc">
+                <p class="form-note">This form is for feedback only. For orders, please use WhatsApp or Email above.</p>
+                <p id="contact-desc">Share your feedback, suggestions, or compliments. We read every message.</p>
+                                <div class="rating" role="group" aria-label="Rating">
+                    <span class="rating-label">Rate your experience:</span>
+                    <label><input type="radio" name="rating" value="5"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></label>
+                    <label><input type="radio" name="rating" value="4"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span></label>
+                    <label><input type="radio" name="rating" value="3"><span class="stars">&#9733;&#9733;&#9733;</span></label>
+                    <label><input type="radio" name="rating" value="2"><span class="stars">&#9733;&#9733;</span></label>
+                    <label><input type="radio" name="rating" value="1"><span class="stars">&#9733;</span></label>
+                </div>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Faith's Kitchen. All rights reserved.</p>
+    </footer>
+
+    <div id="item-preview" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="preview-heading">
+            <h3 id="preview-heading"></h3>
+            <img id="preview-img" src="" alt="">
+            <p id="preview-desc"></p>
+            <p id="preview-price" class="preview-price"></p>
+            <div class="modal-actions">
+                <button id="preview-add" type="button">Add to cart</button>
+                <button id="close-preview" type="button" class="ghost-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
+            <h2 id="cart-heading">Your Cart</h2>
+            <ul id="cart-modal-items"></ul>
+            <p id="cart-total" class="cart-total">Total: KSh 0</p>
+            <div class="modal-actions">
+                <button id="checkout" type="button" disabled>Checkout</button>
+                <button id="close-cart" type="button" class="ghost-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <p id="status-message" class="status-message" aria-live="polite"></p>
+
+    <div id="menu-container" class="menu-container"></div>
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
